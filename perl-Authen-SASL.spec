@@ -14,6 +14,8 @@ Url:		http://search.cpan.org/dist/%{module}
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
+BuildRequires:	perl(Digest::MD5)
+BuildRequires:	perl(Digest::HMAC_MD5)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
