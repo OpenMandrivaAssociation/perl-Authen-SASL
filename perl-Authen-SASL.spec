@@ -1,7 +1,7 @@
 %define module	Authen-SASL
 %define name	perl-%{module}
 %define version 2.12
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
