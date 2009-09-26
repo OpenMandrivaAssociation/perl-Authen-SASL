@@ -1,5 +1,5 @@
 %define upstream_name	 Authen-SASL
-%define upstream_version 2.12
+%define upstream_version 2.13
 
 %define _requires_exceptions perl\(GSSAPI\)
 
@@ -11,7 +11,7 @@ Summary:	SASL Authentication framework
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/G/GB/GBARR/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/G/GB/GBARR/%{upstream_name}-%{upstream_version}.tar.gz
 
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
