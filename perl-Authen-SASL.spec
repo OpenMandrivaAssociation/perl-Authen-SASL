@@ -1,5 +1,5 @@
 %define upstream_name	 Authen-SASL
-%define upstream_version 2.1401
+%define upstream_version 2.15
 
 %define _requires_exceptions perl\(GSSAPI\)
 
