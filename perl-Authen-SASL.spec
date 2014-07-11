@@ -10,7 +10,7 @@
 Summary:	SASL Authentication framework
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	12
+Release:	13
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
