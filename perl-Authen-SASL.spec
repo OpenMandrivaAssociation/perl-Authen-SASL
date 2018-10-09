@@ -20,6 +20,7 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(Digest::MD5)
 BuildRequires:	perl(Digest::HMAC_MD5)
 BuildRequires:	perl(Module::Install)
+BuildRequires:	perl(Test::More)
 
 %description
 SASL is a generic mechanism for authentication used by several network
