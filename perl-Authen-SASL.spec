@@ -10,7 +10,7 @@
 Summary:	SASL Authentication framework
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/release/Authen-SASL
@@ -32,13 +32,10 @@ should be able to share.
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor < /dev/null
-%make
-
-%check
-make test
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes api.txt
