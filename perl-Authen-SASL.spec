@@ -1,4 +1,4 @@
-%define upstream_name	 Authen-SASL
+%define upstream_name Authen-SASL
 %define upstream_version 2.16
 
 %if %{_use_internal_dependency_generator}
@@ -10,7 +10,7 @@
 Summary:	SASL Authentication framework
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/release/Authen-SASL
@@ -40,4 +40,4 @@ should be able to share.
 %files
 %doc Changes api.txt
 %{perl_vendorlib}/Authen
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
