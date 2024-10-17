@@ -13,7 +13,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/release/Authen-SASL
+Url:		https://metacpan.org/release/Authen-SASL
 Source0:	https://cpan.metacpan.org/authors/id/G/GB/GBARR/Authen-SASL-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
