@@ -16,6 +16,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/release/Authen-SASL
 Source0:	https://cpan.metacpan.org/authors/id/G/GB/GBARR/Authen-SASL-%{upstream_version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Digest::MD5)
 BuildRequires:	perl(Digest::HMAC_MD5)
