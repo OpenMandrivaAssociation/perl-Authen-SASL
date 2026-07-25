@@ -1,5 +1,5 @@
 %define upstream_name Authen-SASL
-%define upstream_version 2.16
+%define upstream_version 2.2000
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(GSSAPI\\)'
@@ -9,12 +9,12 @@
 
 Summary:	SASL Authentication framework
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://metacpan.org/release/Authen-SASL
-Source0:	https://cpan.metacpan.org/authors/id/G/GB/GBARR/Authen-SASL-%{upstream_version}.tar.gz
+Url:		https://github.com/perl-authen-sasl/perl-authen-sasl
+Source0:	https://cpan.metacpan.org/authors/id/E/EH/EHUELS/Authen-SASL-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
