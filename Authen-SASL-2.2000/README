@@ -1,0 +1,38 @@
+Authen::SASL - SASL Authentication framework
+
+
+DESCRIPTION
+-----------
+
+SASL is a generic mechanism for authentication used by several network
+protocols. Authen::SASL provides an implementation framework that all
+protocols should be able to share.
+
+
+PREREQUISITES
+-------------
+
+The following modules must already be installed before attempting to
+build Authen::SASL:
+
+  * Perl, at least version 5.14.0, with its standard modules:
+    * Digest::MD5
+    * JSON::PP
+    * Test::More (for running tests only)
+  * Crypt::URandom
+  * Digest::HMAC_MD5
+  * GSSAPI (optional; for Kerberos v5 support)
+
+INSTALLING
+----------
+
+Once the prerequisites are met the module is built and installed in the
+standard manner:
+
+  perl Makefile.PL
+  make
+  make test
+  make install
+
+Depending on how perl is set up, the last step above may require elevated
+privileges.

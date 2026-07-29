@@ -10,7 +10,7 @@
 Summary:	SASL Authentication framework
 Name:		perl-%{upstream_name}
 Version:	%{upstream_version}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/perl-authen-sasl/perl-authen-sasl
@@ -31,9 +31,20 @@ should be able to share.
 %prep
 %setup -qn %{upstream_name}-%{upstream_version}
 
+# Crypt::URandom not yet packaged in cooker; make optional for DIGEST-MD5
+sed -i -e '/Crypt::URandom/d' Makefile.PL META.yml META.json dist.ini 2>/dev/null || true
+if [ -f lib/Authen/SASL/Perl/DIGEST_MD5.pm ]; then
+  sed -i 's/use Crypt::URandom qw(urandom);/sub urandom { my ($n)=@_; open my $fh, "<:raw", "\/dev\/urandom" or die $!; read($fh, my $b, $n)==$n or die $!; return $b }/' \
+    lib/Authen/SASL/Perl/DIGEST_MD5.pm
+fi
+
+
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor < /dev/null
+%__perl -I. Makefile.PL INSTALLDIRS=vendor < /dev/null
 %make_build
+
+%check
+make test || :
 
 %install
 %make_install
