@@ -1,5 +1,5 @@
 %define upstream_name Authen-SASL
-%define upstream_version 2.2000
+%define upstream_version 2.2100
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(GSSAPI\\)'
